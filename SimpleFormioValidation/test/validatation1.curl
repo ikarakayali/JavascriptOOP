@@ -1,10 +1,6 @@
-Inspired from:
-    Issue => https://github.com/formio/formio.js/issues/5245
-    Referece file => https://github.com/formio/formio/blob/master/src/resources/Validator.js
-    
-Validation Test Request
-http://localhost:3000/
-{
+curl --location 'http://localhost:3000/' \
+--header 'Content-Type: application/json' \
+--data '{
     "formDefinition": {
         "components": [
             {
@@ -30,8 +26,8 @@ http://localhost:3000/
     },
     "submittedData": {
         "data": {
-            "textField": "1",
+            "textField": "",
             "submit": false
         }
     }
-}
+}'
